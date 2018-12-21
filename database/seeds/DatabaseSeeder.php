@@ -38,9 +38,8 @@ class DatabaseSeeder extends Seeder
     {
         $faker = Factory::create('ru_RU');
 
-        $name = $faker->name;
-        $name = explode(' ', $name);
-        $name = $name[2].' '.mb_substr($name[1],0,1).'.'.mb_substr($name[0],0,1) .'.';
+        $gender = rand(0,1) ? '' : 'a';
+        $name = $faker->lastName.$gender.' '.mb_substr($faker->lastName,0,1).'.'.mb_substr($faker->lastName,0,1).'.';
 
         return $name;
     }

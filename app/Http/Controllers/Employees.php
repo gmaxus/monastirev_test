@@ -11,7 +11,6 @@ class Employees extends Controller
 {
     public function tree()
     {
-
         $tree = Tree::get()->toTree();
 
         return $tree;
